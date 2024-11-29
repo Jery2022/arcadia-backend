@@ -1,13 +1,7 @@
 <?php
 
-/* 
- * Ce fichier est le point d'entrée de notre application. 
- * Il permet de charger les dépendances nécessaires à notre application.
- * Il permet également de gérer les routes de notre application.
-*/
 require_once './functions.php';
 require_once './src/partials/header_part.php';
-
 ?>
 
 <div class="container-fluid">
@@ -86,10 +80,61 @@ require_once './src/partials/header_part.php';
           </button>
         </div>
       </div>
-      <!-- Contenu dynamique de la page -->            
+
+      <div class="container">
       <?php 
-        echo homeContent("service");
+        echo '
+          <div class="row">
+              <div class="col-12 d-flex justify-content-start mb-3">
+                <h5>Utilisateurs</h5>
+              </div>
+          </div>  
+          <div class="row">
+          <form class="row gx-3 gy-2 align-items-center">
+            <div class="row">
+                <div class="col-sm-3 mb-3">
+                  <label class="visually-hidden" for="specificSizeInputName">Name</label>
+                  <input type="text" class="form-control" id="specificSizeInputName" placeholder="Nom">
+                </div>
+                <div class="col-sm-3 mb-3">
+                  <label class="visually-hidden" for="specificSizeInputLastName">LastName</label>
+                  <input type="text" class="form-control" id="specificSizeInputLastName" placeholder="Prénom">
+                </div>
+                <div class="col-sm-3  mb-3">
+                  <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+                  <div class="input-group">
+                    <div class="input-group-text">@</div>
+                    <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username">
+                  </div>
+                </div>
+                <div class="col-sm-3 mb-3">
+                  <label class="visually-hidden" for="specificSizeInputPassword">Password</label>
+                  <input type="password" class="form-control" id="specificSizeInputPassword" placeholder="Password">
+                </div>
+                <div class="col-sm-3  mb-3">
+                  <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                  <select class="form-select" id="specificSizeSelect">
+                    <option selected>Rôle...</option>
+                    <option value="1">Administrateur</option>
+                    <option value="2">Employé</option>
+                    <option value="3">Vétéinaire</option>
+                  </select>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mt-3">Ajouter</button>
+                </div>
+                <div class="col-auto">
+                <button type="submit" class="btn btn-danger mt-3">Annuler</button>
+            </div>
+          </form>
+        </div>';
         ?>
+      </div>
+    </main>
+  </div>
+</div>
 
 <?php 
 require_once './src/partials/footer_part.php';
