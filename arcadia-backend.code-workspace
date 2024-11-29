@@ -1,0 +1,42 @@
+{
+	"folders": [
+		{
+			"path": "../../../Users/jewom/Documents/MesProjets/arcadia-front"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"sqltools.connections": [
+			{
+				"mysqlOptions": {
+					"authProtocol": "default",
+					"enableSsl": "Disabled"
+				},
+				"previewLimit": 50,
+				"server": "mysql-ejyr.alwaysdata.net",
+				"port": 3306,
+				"driver": "MySQL",
+				"name": "Arcadia-alwawsdata",
+				"database": "ejyr_zoo_arcadia",
+				"username": "ejyr_admin_arcad",
+				"askForPassword": true
+			},
+			{
+				"mysqlOptions": {
+					"authProtocol": "default",
+					"enableSsl": "Disabled"
+				},
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 3306,
+				"driver": "MariaDB",
+				"name": "Arcadia",
+				"database": "jery_zoo_arcadia",
+				"username": "jose",
+				"askForPassword": true
+			}
+		]
+	}
+}
